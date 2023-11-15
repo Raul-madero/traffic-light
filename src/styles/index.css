@@ -4,12 +4,13 @@
   width: 100px;
   background-color: red;
   opacity: 0.4;
+  margin: 10px 0;
 }
 .light:hover {
-  opacity: 1!important;
-  box-shadow: rgba(0,128,255,0.2) 0px 8px 24px;
+  opacity: 1 !important;
+  box-shadow: rgba(0, 128, 255, 0.2) 0px 8px 24px;
 }
-.trafficLight{
+.trafficLight {
   border: 1px solid black;
   width: fit-content;
   background: rgb(129, 129, 7);
