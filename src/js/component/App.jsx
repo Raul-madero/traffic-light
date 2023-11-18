@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Light from "./Light";
 
 const App = () => {
   const [activeLight, setActiveLight] = useState("red");
@@ -43,12 +42,30 @@ const App = () => {
     <>
       <div className="bg-black m-auto base" />
       <div className="d-flex flex-column g-1 p-1 m-auto trafficLight">
-        <Light color="red" opacity={activeLight === "red" ? 1 : 0.4} />
-        <Light color="yellow" opacity={activeLight === "yellow" ? 1 : 0.4} />
-        <Light
-          color="rgb(0,255,0)"
-          opacity={activeLight === "green" ? 1 : 0.4}
-        />
+        <div
+          onClick={() => setActiveLight("red")}
+          className="light"
+          style={{
+            background: "red",
+            opacity: activeLight === "red" ? 1 : 0.4,
+          }}
+        ></div>
+        <div
+          onClick={() => setActiveLight("yellow")}
+          className="light"
+          style={{
+            background: "yellow",
+            opacity: activeLight === "yellow" ? 1 : 0.4,
+          }}
+        ></div>
+        <div
+          onClick={() => setActiveLight("green")}
+          className="light"
+          style={{
+            background: "rgb(0,255,0)",
+            opacity: activeLight === "green" ? 1 : 0.4,
+          }}
+        ></div>
       </div>
       <h1 style={{ margin: "auto", width: "fit-content" }}>{activeLight}</h1>
       <button
